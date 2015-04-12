@@ -4,8 +4,8 @@
 
 	var { diff, apply } = require('object-diff');
 
-	var a = { ... }, b = { ... };
+	var newState = { ... }, oldState = { ... };
 
-	var patch = diff(a, b);
+	var patch = diff(newState, oldState);
 
-	apply(patch, b); // equals to a;
+	apply(patch, oldState); // equals to newState;
